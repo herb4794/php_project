@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --lg-font: 'Kaisei Tokumin', serif;
+  --sm-font: 'Poppins', sans-serif;
+  --pink: #e5345b;
+  --pinkdanger: #ff7b00;
+}
+
+body {
+  font-family: var(--sm-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  background: lightblue;
+  background: radial-gradient(white 30%, lightblue 70%)
+}
+
+.fa-star,
+.fa-star-half {
+  color: yellowgreen;
+  padding: 3% 0;
+}
