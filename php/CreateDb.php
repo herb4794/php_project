@@ -21,6 +21,25 @@ class CreateDb{
     $this->serverName = $serverName;
     $this->userName = $userName;
     $this->password = $password;
+
+    // create connection
+
+    $this->con= mysqli_connect($serveName, $userName, $password);
+
+    // Check connection
+    if(!$this->con){
+      die("Connection failed: ".mysqli_connect_error());
+    }
+
+    // query
+
+    $sql = "CREATE DATABASE IF NOT EXISTS $dbName";
+
+    // execute query
+    if(mysqli_query($this->con, $sql)){
+      $this->con = mysqli_connect($serveName, $userName, $password, $dbName)
+    }
+
   }
 
 }
